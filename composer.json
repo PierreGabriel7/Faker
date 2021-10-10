@@ -1,0 +1,16 @@
+{
+    "name": "el-pi/personal",
+    "type": "project",
+    "require": {
+        "fzaninotto/faker": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "ISL\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "poiree445",
+        "email": "gabrielp@isl-edu.be"
+    }]
+}

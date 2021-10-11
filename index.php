@@ -36,8 +36,15 @@ use ISL\Entity\Personne;
 
         <tbody>
             <?php
-                $personneManager = new PersonneManager;
-                $personneManager->showPersonne(2);
+                $persons = PersonneManager::create(15);
+                foreach($persons as $Key => $val){
+                    echo "<tr>";
+                    foreach($val as $value){
+                        echo "<td>".$value."</td>";
+                    }
+                    echo "</tr>";
+                }
+
             ?>
         </tbody>
     </table>

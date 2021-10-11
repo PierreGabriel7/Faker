@@ -36,6 +36,8 @@ use ISL\Entity\Personne;
 
         <tbody>
             <?php
+
+
                 $persons = PersonneManager::create(15);
                 foreach($persons as $Key => $val){
                     echo "<tr>";
@@ -44,6 +46,9 @@ use ISL\Entity\Personne;
                     }
                     echo "</tr>";
                 }
+                $connexion = new PDO('mysql:host=localhost;dbname=poo_php', 'root', '');
+                $topush=new PersonneManager($connexion);
+                $topush->push();
 
             ?>
         </tbody>
